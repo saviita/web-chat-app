@@ -5,11 +5,63 @@
     <!-- PON UN FAVICON!!! -->
     <link rel="icon" type="image/svg+xml" href="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <!-- CAMBIA EL TITLE!!! -->
     <title>Vite Template</title>
   </head>
   <body>
-    <h1>Hola</h1>
+    <main class="main">
+      <article class="phone">
+        <div class="phone__contact">
+          <img class="phone__back" src="" alt="">
+          <img class="phone__profile" src="" alt="">
+          <div class="phone__info">
+            <span class="name phone__name">Samuel Green</span>
+            <span class="available phone__available">Available to Walk</span>
+          </div>
+          <img class="phone__options" src="" alt="">
+        </div>
+
+        <div class="phone__firstmessages">
+          <p class="text purple phone__message1">That sounds great. I’d be happy to discuss more.</p>
+          <p class="text purple phone__message2">Could you send over some pictures of your dog, please?</p>
+        </div>
+
+        <div class="phone__secondmessages">
+          <img class="photo phone__photo1" src="" alt="">
+          <img class="photo phone__photo2" src="" alt="">
+          <img class="photo phone__photo3" src="" alt="">
+          <p class="text purple_dark phone__message3">Here are a few pictures. She’s a happy girl!</p>
+          <p class="text purple_dark phone__message4">Can you make it?</p>
+        </div>
+
+        <div class="phone__thirdmessages">
+          <p class="text purple phone__message5">She looks so happy! The time we discussed works. How long shall I take her out for?</p>
+          <div class="phone__walk30">
+            <img class="phone__check" src="" alt="">
+            <p class="text white phone__walk">30 minute walk</p>
+            <span class="price phone__price">$29</span>
+          </div>
+          <div class="phone__walk1">
+            <img class="phone__check" src="" alt="">
+            <p class="text white phone__walk">1 hour walk</p>
+            <span class="price phone__price">$49</span>
+          </div>
+        </div>
+
+        <div class="phone__input">
+          <span class="placeholder phone__placeholder">Type a message…</span>
+          <img class="phone__send" src="" alt="">
+        </div>
+      </article>
+
+      <article class="description">
+        <h2 class="title description__title">Simple booking</h2>
+        <p class="text2 description__text">Stay in touch with our dog walkers through the chat interface. This makes it easy to discuss arrangements and make bookings. Once the walk has been completed you can rate your walker and book again all through the chat.</p>
+      </article>
+    </main>
     <script type="module" src="./js/index.js"></script>
   </body>
 </html>
