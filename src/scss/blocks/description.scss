@@ -1,0 +1,11 @@
+@use '../mixins/responsive.scss' as *;
+
+.description {
+    max-width: 445px;
+    padding-inline: 32px;
+    text-align: center;
+
+    @include responsive(desktop) {
+        text-align: left;
+    }
+}

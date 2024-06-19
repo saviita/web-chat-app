@@ -1,9 +1,127 @@
+@use '../mixins/pseudo.scss' as *;
+
 .phone {
     width: 247px;
     height: 505px;
+    margin-inline: auto;
+    margin-bottom: 64px;
     border-radius: 30px;
     background: #F5F3F7;
-    border: 11px solid ;
+    border: 11px solid #fff;
     box-shadow: 0px 30px 60px -10px rgba(62, 39, 83, 0.25);
-    padding: 11px 9.5px;
+
+    &__contact {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: linear-gradient(225deg, #E844FF 0%, #8739FF 100%);
+        padding: 30px 16.5px 12px 16.5px;
+        border-radius: 20px 20px 6px 6px;
+
+        &::after {
+            @include pseudo (129px, 18px) {
+                background-color: white;
+                top: 0;
+                left: 50%;
+                translate: -50%;
+                padding-inline: 16px;
+                border-radius: 0 0 14px 14px;
+            }
+        }
+    }
+
+    &__back {
+        width: 3px;
+        height: 10px;
+    }
+
+   .messages {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap: 16px;
+    padding: 11px 7.5px 0 7.5px;
+   }
+
+    &__message1, &__message2, &__message5 {
+        max-width: 128px;
+        width: fit-content;
+        padding: 6px 8px;
+        margin: 0;
+        border-radius: 10px 10px 10px 4px;
+        background-color: #EEE5F4;
+    }
+
+    &__firstmessages {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__secondmessages {
+        display: flex;
+        align-items: end;
+        margin-left: auto;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__thirdmessages {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__message3, &__message4 {
+        max-width: 128px;
+        width: fit-content;
+        padding: 6px 8px;
+        margin: 0;
+        border-radius: 10px 10px 4px 10px;
+        background-color: #fff;
+        box-shadow: 0px 10px 5px -5px rgba(62, 39, 83, 0.05);
+    }
+
+    &__price {
+        margin-left: auto;
+    }
+
+    &__input {
+        background-color: white;
+        width: 213px;
+        height: 34px;
+        border-radius: 17px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 4px;
+    }
+
+    .photos {
+        display: flex;
+        gap: 8px;
+    }
+
+    .photo {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        box-shadow: 0px 10px 5px -5px rgba(62, 39, 83, 0.05);
+    }
+
+    &__walk {
+        width: 160px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        background-image: linear-gradient(225deg, #E844FF, #8739FF);
+        border-radius: 10px 10px 10px 4px;
+        padding: 11px 16px 10px 8px;
+        gap: 8px;
+    }
+
+    &__placeholder {
+        margin-left: 16px;
+    }
 }

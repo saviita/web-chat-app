@@ -1,1 +1,42 @@
 @use '../mixins/pseudo.scss' as *;
+@use '../mixins/responsive.scss' as *;
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-content: center;
+    position: relative;
+    margin-inline: auto;
+    padding-top: 64px;
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    &::after, &::before {
+        @include pseudo (510px, 1018px) {
+            background-image: linear-gradient(225deg, #E844FF, #8739FF);
+            left: -320px;
+            top: -550px;
+            border-radius: 15.9375rem;
+            z-index: -1;
+        }
+    }
+
+    &::after {
+        left: -200px;
+    }
+
+    &::before {
+        left: 200px;
+        top: 400px;
+        opacity: 0.1;
+
+        @include responsive(desktop) {
+            left: 1115px;
+        }
+    }
+
+    @include responsive (desktop){
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
