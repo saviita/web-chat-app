@@ -11,6 +11,7 @@
     padding-top: 64px;
     min-height: 100vh;
     overflow-x: hidden;
+    
 
     &::after, &::before {
         @include pseudo (510px, 1018px) {
@@ -27,16 +28,17 @@
     }
 
     &::before {
-        left: 200px;
-        top: 400px;
+        /* Calculos que funcionan con un numero fijo y uno variable
+        La variable solo existe aqui
+        --size: 200px;
+        left: calc(var(--size / 2 * -1));*/
+        left: calc(100% - 260px);
+        top: 450px;
         opacity: 0.1;
-
-        @include responsive(desktop) {
-            left: 1115px;
-        }
     }
 
     @include responsive (desktop){
         grid-template-columns: repeat(2, 1fr);
+        align-items: center;
     }
 }
